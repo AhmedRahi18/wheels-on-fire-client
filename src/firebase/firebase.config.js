@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyATlzh2_7Ef6zSG-wLf1CmlG2Sa_lhaJ2k",
-  authDomain: "wheels-on-fire-27487.firebaseapp.com",
-  projectId: "wheels-on-fire-27487",
-  storageBucket: "wheels-on-fire-27487.appspot.com",
-  messagingSenderId: "1085188071203",
-  appId: "1:1085188071203:web:4f7cac9bda994e5983b696"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase

@@ -1,4 +1,5 @@
 import logo from '../../public/images/images (1).jpeg'
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -9,6 +10,15 @@ const Footer = () => {
           <p className='text-xl font-bold'>
             WheelsOnFire
           </p>
+          <div className='flex gap-2'>
+          <FaFacebook size={20} className='text-blue-600
+          bg-white rounded-full'></FaFacebook>
+          <FaTwitter size={20} className='text-blue-600
+          '></FaTwitter>
+          <FaInstagram size={22} className='text-red-500
+          '></FaInstagram>
+          </div>
+          <p>&copy; 2023 Example Company.All rights reserved.</p>
         </div>
         <div>
           <span className="font-bold text-xl text-white">Services</span>

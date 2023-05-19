@@ -4,8 +4,8 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 const AddToys = () => {
   const { user } = useContext(AuthContext);
 
-  const handleAdd = event => {
-    event.preventDefault()
+  const handleAdd = (event) => {
+    event.preventDefault();
     const form = event.target;
     const toys = form.toy.value;
     const picture = form.picture.value;
@@ -25,17 +25,25 @@ const AddToys = () => {
       price: price,
       rating: rating,
       quantity: quantity,
-      description: detail
+      description: detail,
     }
-    console.log(toysData)
-    
-    
 
+    fetch("http://localhost:5000/toys", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(toysData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   return (
-    <div>
-      <h2 className="text-5xl font-bold text-center mt-16 mb-5 text-black">
+    <div className="">
+      <h2 className="text-5xl font-bold text-center pt-16 mb-5 text-black">
         Add Toys From Here
       </h2>
       <p className="text-gray-700 font-semibold text-center mb-10">

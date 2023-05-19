@@ -1,7 +1,7 @@
 const Banner = () => {
   return (
     <div className="mb-10">
-      <div className="mt-6 rounded-lg bg-[url('https://www.wallpapertip.com/wmimgs/0-1938_download-free-hd-3d-hd-car-fire-wallpaper.jpg')] bg-cover">
+      <div className="rounded-b-lg bg-[url('https://www.wallpapertip.com/wmimgs/0-1938_download-free-hd-3d-hd-car-fire-wallpaper.jpg')] bg-cover">
         <div className="rounded-lg h-full bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
           <h2 className="text-7xl font-bold text-white w-3/4 pt-32 ps-10 ">
             Wheels <span className="text-orange-600 text-6xl">On Fire</span> <br />

@@ -35,13 +35,13 @@ const Navbar = () => {
             className="font-semibold hover:bg-orange-500 px-3 py-1
             rounded hover:text-white hover:border-r-2 border-slate-700 hover:border-b-2"
           >
-            <Link>All Toys</Link>
+            <Link to="/alltoys">All Toys</Link>
           </p>
           <p
             className="font-semibold hover:bg-orange-500 px-3 py-1
             rounded hover:text-white hover:border-r-2 border-slate-700 hover:border-b-2"
           >
-            <Link>My Toys</Link>
+            <Link to="/mytoys">My Toys</Link>
           </p>
           <p
             className="font-semibold hover:bg-orange-500 px-3 py-1

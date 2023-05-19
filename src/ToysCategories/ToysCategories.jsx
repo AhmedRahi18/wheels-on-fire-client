@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import ToyCard from "../ToyCard/ToyCard";
-import { Tab, TabList,  Tabs } from "react-tabs";
 
 const ToysCategories = () => {
     const [toys,setToys] = useState([])
@@ -27,16 +26,16 @@ const ToysCategories = () => {
             </p>
             <div className="bg-black p-3 rounded-lg w-1/2 mb-4 text-center mx-auto">
             <p className="text-2xl mb-3 font-semibold text-white ">Select By Category</p>
-            <Tabs className=''>
-                <TabList className="flex mb-2 justify-center">
-                    <Tab className="text-xl font-bold border-2 border-orange-600 text-orange-600 p-2 rounded-lg me-3 hover:bg-orange-600 hover:text-white"
-                   onClick={()=>handleTabClick('Sports')}>Sports Cars</Tab>
-                    <Tab className="text-xl font-bold border-2 border-orange-600 text-orange-600 p-2 rounded-lg me-3 hover:bg-orange-600 hover:text-white"
-                    onClick={()=>handleTabClick('Off-Road')}>Off-Road Cars</Tab>
-                    <Tab className="text-xl font-bold border-2 border-orange-600 text-orange-600 p-2 rounded-lg hover:bg-orange-600 hover:text-white"
-                    onClick={()=>handleTabClick('Emergency')}>Emergency Cars</Tab>
-                </TabList>
-            </Tabs>
+            <div className=''>
+                <div className="flex mb-2 justify-center">
+                    <p className="text-xl font-bold border-2 border-orange-600 text-orange-600 p-2 rounded-lg me-3 hover:bg-orange-600 hover:text-white"
+                   onClick={()=>handleTabClick('Sports')}>Sports Cars</p>
+                    <p className="text-xl font-bold border-2 border-orange-600 text-orange-600 p-2 rounded-lg me-3 hover:bg-orange-600 hover:text-white"
+                    onClick={()=>handleTabClick('Off-Road')}>Off-Road Cars</p>
+                    <p className="text-xl font-bold border-2 border-orange-600 text-orange-600 p-2 rounded-lg hover:bg-orange-600 hover:text-white"
+                    onClick={()=>handleTabClick('Emergency')}>Emergency Cars</p>
+                </div>
+            </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
                 {

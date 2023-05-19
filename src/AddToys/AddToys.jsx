@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddToys = () => {
   const { user } = useContext(AuthContext);
@@ -13,7 +14,7 @@ const AddToys = () => {
     const email = form.email.value;
     const subCategory = form.subCategory.value;
     const price = form.price.value;
-    const rating = form.picture.value;
+    const rating = form.rating.value;
     const quantity = form.quantity.value;
     const detail = form.detail.value;
     const toysData = {
@@ -38,11 +39,20 @@ const AddToys = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if(data.insertedId){
+          Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'Toy Added Successfully',
+            showConfirmButton: false,
+            timer: 1500
+          })
+        }
       });
   };
 
   return (
-    <div className="">
+    <div>
       <h2 className="text-5xl font-bold text-center pt-16 mb-5 text-black">
         Add Toys From Here
       </h2>

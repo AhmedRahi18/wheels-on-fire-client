@@ -49,30 +49,34 @@ const Navbar = () => {
               All Toys
             </NavLink>
           </p>
+          { user &&
           <p>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "font-semibold bg-orange-500 px-5 py-2 rounded text-white border-r-2 border-slate-700 border-b-2"
-                  : "font-semibold hover:bg-orange-500 px-3 py-1 text-gray-400 rounded hover:text-white hover:border-r-2 border-slate-700 hover:border-b-2"
-              }
-              to="/mytoys"
-            >
-              My Toys
-            </NavLink>
-          </p>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "font-semibold bg-orange-500 px-5 py-2 rounded text-white border-r-2 border-slate-700 border-b-2"
+                : "font-semibold hover:bg-orange-500 px-3 py-1 text-gray-400 rounded hover:text-white hover:border-r-2 border-slate-700 hover:border-b-2"
+            }
+            to="/mytoys"
+          >
+            My Toys
+          </NavLink>
+        </p>
+          }
+          {user && 
           <p>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "font-semibold bg-orange-500 px-5 py-2 rounded text-white border-r-2 border-slate-700 border-b-2"
-                  : "font-semibold hover:bg-orange-500 px-3 py-1 text-gray-400 rounded hover:text-white hover:border-r-2 border-slate-700 hover:border-b-2"
-              }
-              to="/addtoys"
-            >
-              Add a toy
-            </NavLink>
-          </p>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "font-semibold bg-orange-500 px-5 py-2 rounded text-white border-r-2 border-slate-700 border-b-2"
+                : "font-semibold hover:bg-orange-500 px-3 py-1 text-gray-400 rounded hover:text-white hover:border-r-2 border-slate-700 hover:border-b-2"
+            }
+            to="/addtoys"
+          >
+            Add a toy
+          </NavLink>
+        </p>
+          }
           <p>
             <NavLink
               className={({ isActive }) =>

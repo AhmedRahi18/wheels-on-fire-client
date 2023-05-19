@@ -49,6 +49,7 @@ const AddToys = () => {
           })
         }
       });
+      form.reset()
   };
 
   return (

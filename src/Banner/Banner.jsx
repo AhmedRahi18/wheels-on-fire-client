@@ -5,7 +5,7 @@ const Banner = () => {
         <div className="rounded-lg h-full bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
           <h2 className="text-7xl font-bold text-white w-3/4 pt-32 ps-10 ">
             Wheels <span className="text-orange-600 text-6xl">On Fire</span> <br />
-            <span className="text-6xl text-slate-200 ">Toy Store</span>
+            <span className="text-6xl text-slate-200 ">Toy Car Store</span>
           </h2>
           <p className="text-slate-300 font-semibold w-2/4 ms-10 mt-6">Explore our thrilling toy car collection for endless fun and excitement. From sleek sports cars to rugged off-road vehicles, ignite your imagination and start creating unforgettable adventures today!</p>
           <div className="pb-20">

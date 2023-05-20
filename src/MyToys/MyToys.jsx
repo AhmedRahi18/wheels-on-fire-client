@@ -73,8 +73,8 @@ const MyToys = () => {
         ariaLabel='circles-with-bar-loading'
       />
         </div>
-            ):(<div>
-              <h2 className="text-5xl mt-10 mb-4 text-center font-bold">My Toys</h2>
+            ):(<div className="pb-10 px-3 bg-gray-200">
+              <h2 className="text-5xl pt-10 mb-4 text-center text-black font-bold">My Toys</h2>
               <p className="text-gray-700 font-semibold text-center mb-16">
                 Here are those amazing toy cars that you added</p>
               <div>

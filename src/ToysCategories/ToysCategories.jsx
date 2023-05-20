@@ -24,20 +24,21 @@ const ToysCategories = () => {
                 Find your perfect Car! Browse our shop by category section for a
                 <br /> curated selection of toy cars that suit your preferences.
             </p>
-            <div className="bg-black p-3 rounded-lg w-1/2 mb-4 text-center mx-auto">
+            <div className="bg-black p-3 rounded-lg md:w-1/2 mb-4 
+            text-center mx-2 md:mx-auto">
             <p className="text-2xl mb-3 font-semibold text-white ">Select By Category</p>
             <div className=''>
                 <div className="flex mb-2 justify-center">
-                    <p className="text-xl font-bold border-2 border-orange-600 text-orange-600 p-2 rounded-lg me-3 hover:bg-orange-600 hover:text-white"
+                    <p className="text-xl mb-3 md:mb-0 font-bold border-2 border-orange-600 text-orange-600 p-2 rounded-lg me-3 hover:bg-orange-600 hover:text-white"
                    onClick={()=>handleTabClick('Sports')}>Sports Cars</p>
-                    <p className="text-xl font-bold border-2 border-orange-600 text-orange-600 p-2 rounded-lg me-3 hover:bg-orange-600 hover:text-white"
+                    <p className="text-xl mb-3 md:mb-0 font-bold border-2 border-orange-600 text-orange-600 p-2 rounded-lg me-3 hover:bg-orange-600 hover:text-white"
                     onClick={()=>handleTabClick('Off-Road')}>Off-Road Cars</p>
                     <p className="text-xl font-bold border-2 border-orange-600 text-orange-600 p-2 rounded-lg hover:bg-orange-600 hover:text-white"
                     onClick={()=>handleTabClick('Emergency')}>Emergency Cars</p>
                 </div>
             </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-5 md:px-5 pb-16">
                 {
                     toys.map( toy => <ToyCard
                     key={toy._id}

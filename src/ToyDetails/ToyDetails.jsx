@@ -17,7 +17,7 @@ const ToyDetails = () => {
 
   return (
     <div className="bg-gray-300 rounded pb-5">
-      <h2 className="text-center font-bold mt-16 pt-5 mb-4 text-5xl text-black">
+      <h2 className="text-center font-bold pt-16  mb-4 text-5xl text-black">
         Details Of Your Toy Car
       </h2>
       <p className="text-gray-700 font-semibold text-center mb-16">

@@ -22,9 +22,9 @@ const ToyCard = ({ toy }) => {
 
   return (
     <div>
-      <div className="card w-96 bg-gradient-to-t from-black to-gray-800 shadow-xl">
+      <div className="card rounded-lg w-96 bg-gradient-to-t from-black to-zinc-600 shadow-xl">
         <figure>
-          <img className=" m-3 rounded-lg" width={300} src={image} alt="" />
+          <img className="m-3 rounded-lg" width={300} src={image} alt="" />
         </figure>
         <div className="card-body">
           <h2 className="text-2xl font-bold text-white">{name}</h2>

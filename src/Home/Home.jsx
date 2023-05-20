@@ -4,7 +4,7 @@ import ToysCategories from "../ToysCategories/ToysCategories";
 
 const Home = () => {
     return (
-        <div>
+        <div className="bg-gray-200">
             <Banner></Banner>
             <CarsGallery></CarsGallery>
             <ToysCategories></ToysCategories>

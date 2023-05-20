@@ -53,7 +53,7 @@ const AddToys = () => {
   };
 
   return (
-    <div>
+    <div className="bg-gray-200 pb-20 px-2">
       <h2 className="text-5xl font-bold text-center pt-16 mb-5 text-black">
         Add Toys From Here
       </h2>
@@ -62,7 +62,7 @@ const AddToys = () => {
         a variety <br /> of models and styles to expand your high-speed
         adventures!
       </p>
-      <div className="rounded-lg bg-[url('https://t4.ftcdn.net/jpg/05/77/02/47/360_F_577024786_0PFePZ5smKNkhghe4OkcDJbgCScW5t1F.jpg')] bg-cover mb-16 mt-10">
+      <div className="rounded-lg bg-[url('https://t4.ftcdn.net/jpg/05/77/02/47/360_F_577024786_0PFePZ5smKNkhghe4OkcDJbgCScW5t1F.jpg')] bg-cover">
         <div
           className="rounded-lg h-full 
       bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]"

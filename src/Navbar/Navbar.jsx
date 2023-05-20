@@ -15,9 +15,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-black p-3 rounded-t-lg mt-3">
+    <div className="bg-black p-3 md:rounded-t-lg md:mt-3">
       <div className="md:flex justify-between mt-5 items-center">
-        <div className="flex">
+        <div className="flex mb-5 md:mb-0">
           <img className="w-16 rounded" src={logo} alt="" />
           <i className="text-2xl font-bold mt-3 text-white">
             Wheels
@@ -25,7 +25,7 @@ const Navbar = () => {
           </i>
         </div>
         <div className="md:flex items-center gap-7 my-3 md:my-0">
-          <p>
+          <p className="mb-2 md:mb-0">
             <NavLink
               className={({ isActive }) =>
                 isActive
@@ -37,7 +37,7 @@ const Navbar = () => {
               Home
             </NavLink>
           </p>
-          <p>
+          <p className="mb-2 md:mb-0">
             <NavLink
               className={({ isActive }) =>
                 isActive
@@ -50,7 +50,7 @@ const Navbar = () => {
             </NavLink>
           </p>
           { user &&
-          <p>
+          <p className="mb-2 md:mb-0">
           <NavLink
             className={({ isActive }) =>
               isActive
@@ -64,7 +64,7 @@ const Navbar = () => {
         </p>
           }
           {user && 
-          <p>
+          <p className="mb-2 md:mb-0">
           <NavLink
             className={({ isActive }) =>
               isActive
@@ -77,7 +77,7 @@ const Navbar = () => {
           </NavLink>
         </p>
           }
-          <p>
+          <p className="mb-2 md:mb-0">
             <NavLink
               className={({ isActive }) =>
                 isActive

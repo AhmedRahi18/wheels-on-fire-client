@@ -8,6 +8,7 @@ const AllToys = () => {
     const [allToys,setAllToys] = useState([])
     const {user} = useContext(AuthContext)
     const [loader,setLoader] = useState(true)
+    const [search,setSearch] = useState('')
 
     useEffect(()=>{
       setLoader(true)
@@ -18,6 +19,15 @@ const AllToys = () => {
           setLoader(false)
         })
     },[])
+
+    const handleSearch = () => {
+      fetch(`http://localhost:5000/toysearch/${search}`)
+      .then(res => res.json())
+      .then(data => {
+        setAllToys(data)
+        setLoader(false)
+      })
+    }
 
     const handleDetails = () => {
       if(!user){
@@ -31,9 +41,9 @@ const AllToys = () => {
     }
 
     return (
-        <div>
+        <div className="bg-gray-200">
           {loader? (
-            <div className="flex justify-center items-center my-20">
+            <div className="flex justify-center items-center py-20">
             <h4 className="text-3xl font-serif font-semibold text-black">Loading...</h4>
             <CirclesWithBar
         height="100"
@@ -48,15 +58,16 @@ const AllToys = () => {
         ariaLabel='circles-with-bar-loading'
       />
         </div>
-          ): (<div>
-            <h2 className="text-5xl font-bold text-black text-center mt-10 mb-5">
+          ): (<div className="px-3 pb-10">
+            <h2 className="text-5xl font-bold text-black text-center pt-10 pb-5">
                 All Car Toys</h2>
             <p className="text-gray-700 font-semibold text-center mb-10">Discover a world of car-themed fun with our extensive collection of car toys. From racing <br /> cars to construction vehicles, fuel their imagination and adventure.</p>
             <div className="content-center text-center mb-6">
-            <input className=" w-1/2 font-semibold border-2
+            <input onChange={(e)=> setSearch(e.target.value)} className=" w-1/2 font-semibold border-2
              border-orange-500 input" type="text"
                placeholder="Search toy" />
-               
+               <button onClick={handleSearch} className="btn border-none 
+              bg-orange-500 hover:bg-orange-700 ms-2">Search</button>
             </div>
             <div>
             <div className="overflow-x-auto">
@@ -85,7 +96,8 @@ const AllToys = () => {
               <td className="text-md bg-black text-gray-300 border-t-2 border-t-orange-600 font-semibold">${singleToy.price}</td>
               <td className="text-md bg-black text-gray-300 border-t-2 border-t-orange-600 font-semibold text-center">{singleToy.quantity}</td>
               <td className="bg-black text-gray-300 border-t-2 border-t-orange-600 ">
-                <Link to={`/details/${singleToy._id}`}><button onClick={handleDetails} className="btn border-none 
+                <Link to={`/details/${singleToy._id}`}><button onClick={handleDetails}
+                 className="btn border-none 
               bg-orange-500 hover:bg-orange-700">Details</button></Link>
               </td>
             </tr>

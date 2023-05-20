@@ -3,8 +3,8 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <div>
-      <footer className="footer p-10 bg-black text-gray-300">
+    <div className="mt-16 ">
+      <footer className="footer p-10 rounded-lg bg-black text-gray-300">
         <div>
           <img className='w-24 rounded-xl' src={logo} alt="" />
           <p className='text-xl font-bold'>

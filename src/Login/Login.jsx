@@ -53,31 +53,34 @@ const Login = () => {
           <div className="card-body">
             <div className='flex items-center'>
             <FaUserCheck size={25}></FaUserCheck> 
-            <h2 className="text-2xl font-bold">Login</h2>
+            <h2 className="text-2xl ms-2 
+                 font-serif font-semibold">Login</h2>
             </div>
             <form onSubmit={handleLogin}>
             <div className="form-control">
               <label className="label">
-                <span className="label-text font-semibold">Email</span>
+                <span className="label-text text-xl
+                 font-serif">Email</span>
               </label>
               <input
                 type="email"
                 name='email'
-                placeholder="email"
+                placeholder="Email"
                 required
-                className="input input-bordered"
+                className="input input-bordered bg-slate-200 font-semibold"
               />
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text font-semibold">Password</span>
+                <span className="label-text text-xl 
+                 font-serif">Password</span>
               </label>
               <input
                 type="password"
                 name='password'
-                placeholder="password"
+                placeholder="Password"
                 required
-                className="input input-bordered"
+                className="input input-bordered bg-slate-200 font-semibold"
               />
             </div>
             <p className='text-red-500 mt-2'>{error}</p>
@@ -85,7 +88,7 @@ const Login = () => {
               <input className="btn px-10 bg-orange-600 text-white font-bold
            border-none rounded hover:bg-orange-500" type="submit" value="Login"/>
             </div>
-            <p className='text-center mt-3'>New to Wheels On Fire? <Link to="/register" className='text-orange-500'>Register</Link> </p>
+            <p className='text-center mt-3 font-serif'>New to Wheels On Fire? <Link to="/register" className='text-orange-500'>Register</Link> </p>
             <div className="divider">OR</div>
             <div onClick={handleGoogle} className='flex items-center rounded-xl  bg-white'>
             <FaGoogle className='text-blue-500 ms-16'></FaGoogle>

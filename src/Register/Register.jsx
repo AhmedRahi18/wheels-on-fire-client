@@ -69,55 +69,59 @@ const Register = () => {
           <div className="card-body">
             <div className='flex items-center'>
             <FaUserPlus size={25}></FaUserPlus> 
-            <h2 className="text-2xl font-bold">Register</h2>
+            <h2 className="text-2xl font-semibold font-serif ms-2 ">Register</h2>
             </div>
             <form onSubmit={handleRegister}>
             <div className="form-control">
               <label className="label">
-                <span className="label-text font-semibold">Name</span>
+                <span className="label-text  text-xl 
+                 font-serif">Name</span>
               </label>
               <input
                 type="text"
                 name='name'
                 placeholder="Name"
                 required
-                className="input input-bordered"
+                className="input input-bordered bg-slate-200 font-semibold"
               />
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text font-semibold">Photo URL</span>
+                <span className="label-text text-xl 
+                 font-serif">Photo URL</span>
               </label>
               <input
                 type="text"
                 name='photo'
                 placeholder="Photo URL"
                 required
-                className="input input-bordered"
+                className="input input-bordered bg-slate-200 font-semibold"
               />
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text font-semibold">Email</span>
+                <span className="label-text text-xl 
+                 font-serif">Email</span>
               </label>
               <input
                 type="email"
                 name='email'
                 placeholder="Email"
                 required
-                className="input input-bordered"
+                className="input input-bordered bg-slate-200 font-semibold"
               />
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text font-semibold">Password</span>
+                <span className="label-text text-xl 
+                 font-serif">Password</span>
               </label>
               <input
                 type="password"
                 name='password'
                 placeholder="Password"
                 required
-                className="input input-bordered"
+                className="input input-bordered bg-slate-200 font-semibold"
               />
             </div>
             <p className='text-red-500 mt-2'>{error}</p>
@@ -125,7 +129,7 @@ const Register = () => {
               <input className="btn px-10 bg-orange-600 text-white font-bold
            border-none rounded hover:bg-orange-500" type="submit" value="Register"/>
             </div>
-            <p className='text-center mt-3'>Already have an account? <Link to="/login" className='text-orange-500'>Login</Link> </p>
+            <p className='text-center mt-3 font-serif'>Already have an account? <Link to="/login" className='text-orange-500'>Login</Link> </p>
             <div className="divider">OR</div>
             <div onClick={handleGoogle} className='flex items-center rounded-xl  bg-white'>
             <FaGoogle className='text-blue-500 ms-16'></FaGoogle>

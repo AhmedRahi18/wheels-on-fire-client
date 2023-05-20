@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { FaTrashAlt, FaPen } from 'react-icons/fa';
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const MyToys = () => {
     const {user} = useContext(AuthContext)
@@ -81,8 +82,8 @@ const MyToys = () => {
               <td className="bg-black border-t-2 border-t-orange-600 text-gray-300">
                 <button onClick={()=>handleDelete(singleToy._id)} className="btn border-none
               bg-red-600 hover:bg-red-700 me-2"><FaTrashAlt></FaTrashAlt> </button>
-                <button className="btn border-none
-              bg-teal-500 hover:bg-teal-700 me-2"><FaPen></FaPen> </button>
+                <Link to={`/update/${singleToy._id}`}><button className="btn border-none
+              bg-teal-500 hover:bg-teal-700 me-2"><FaPen></FaPen> </button></Link>
                 <button className="btn border-none
               bg-orange-500 hover:bg-orange-700 me-2">Details</button>
               </td>

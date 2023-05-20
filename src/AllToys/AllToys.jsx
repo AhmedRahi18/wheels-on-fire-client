@@ -51,7 +51,13 @@ const AllToys = () => {
           ): (<div>
             <h2 className="text-5xl font-bold text-black text-center mt-10 mb-5">
                 All Car Toys</h2>
-            <p className="text-gray-700 font-semibold text-center mb-16">Discover a world of car-themed fun with our extensive collection of car toys. From racing <br /> cars to construction vehicles, fuel their imagination and adventure.</p>
+            <p className="text-gray-700 font-semibold text-center mb-10">Discover a world of car-themed fun with our extensive collection of car toys. From racing <br /> cars to construction vehicles, fuel their imagination and adventure.</p>
+            <div className="content-center text-center mb-6">
+            <input className=" w-1/2 font-semibold border-2
+             border-orange-500 input" type="text"
+               placeholder="Search toy" />
+               
+            </div>
             <div>
             <div className="overflow-x-auto">
         <table className="table w-full">

@@ -75,7 +75,8 @@ const MyToys = () => {
         </div>
             ):(<div>
               <h2 className="text-5xl mt-10 mb-4 text-center font-bold">My Toys</h2>
-              <p className="text-gray-700 font-semibold text-center mb-16">Here are those amazing toy cars that you added</p>
+              <p className="text-gray-700 font-semibold text-center mb-16">
+                Here are those amazing toy cars that you added</p>
               <div>
               <div className="overflow-x-auto">
           <table className="table w-full">

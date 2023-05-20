@@ -18,7 +18,7 @@ const Footer = () => {
           <FaInstagram size={22} className='text-red-500
           '></FaInstagram>
           </div>
-          <p>&copy; 2023 wheels on fire.All rights reserved.</p>
+          <p>&copy; 2023 WheelsOnFire.All rights reserved.</p>
         </div>
         <div className='grid grid-cols-2 gap-5'>
         <div>

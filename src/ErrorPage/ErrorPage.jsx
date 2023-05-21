@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 
 const ErrorPage = () => {
+    useTitle('404')
     return (
         <div className="">
             <h2 className="text-6xl text-black font-bold text-center mt-32">

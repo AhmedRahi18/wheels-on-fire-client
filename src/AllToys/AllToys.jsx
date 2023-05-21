@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { CirclesWithBar } from "react-loader-spinner";
+import useTitle from "../hooks/useTitle";
 
 const AllToys = () => {
     const [allToys,setAllToys] = useState([])
     const {user} = useContext(AuthContext)
     const [loader,setLoader] = useState(true)
     const [search,setSearch] = useState('')
+    useTitle('AllToys')
 
     useEffect(()=>{
       setLoader(true)
@@ -74,28 +76,28 @@ const AllToys = () => {
         <table className="table w-full">
           <thead>
             <tr>
-              <th className="text-lg bg-black text-gray-300 font-semibold">No.</th>
-              <th className="text-lg bg-black text-gray-300 font-semibold">Toy</th>
-              <th className="text-lg bg-black text-gray-300 font-semibold">Toy Name</th>
-              <th className="text-lg bg-black text-gray-300 font-semibold">Seller</th>
-              <th className="text-lg bg-black text-gray-300 font-semibold">Sub-Category</th>
-              <th className="text-lg bg-black text-gray-300 font-semibold">Price</th>
-              <th className="text-lg bg-black text-gray-300 font-semibold">Available Quantity</th>
-              <th className="bg-black text-gray-300"></th>
+              <th className="text-lg bg-zinc-800 text-gray-300 font-semibold">No.</th>
+              <th className="text-lg bg-zinc-800 text-gray-300 font-semibold">Toy</th>
+              <th className="text-lg bg-zinc-800 text-gray-300 font-semibold">Toy Name</th>
+              <th className="text-lg bg-zinc-800 text-gray-300 font-semibold">Seller</th>
+              <th className="text-lg bg-zinc-800 text-gray-300 font-semibold">Sub-Category</th>
+              <th className="text-lg bg-zinc-800 text-gray-300 font-semibold">Price</th>
+              <th className="text-lg bg-zinc-800 text-gray-300 font-semibold">Available Quantity</th>
+              <th className="bg-zinc-800 text-gray-300"></th>
             </tr>
           </thead>
           <tbody>
             {
                 allToys.map((singleToy,index)=> (
             <tr key={index}>
-              <td className="border-t-2 bg-black text-gray-300 border-t-orange-600">{index+1}</td>
-              <td className="border-t-2 bg-black text-gray-300 border-t-orange-600"><img className="w-16" src={singleToy.image} alt="" /></td>
-              <td className="text-md bg-black text-gray-300 border-t-2 border-t-orange-600 font-semibold">{singleToy.name}</td>
-              <td className="text-md bg-black text-gray-300 border-t-2 border-t-orange-600 font-semibold">{singleToy.sellerName}</td>
-              <td className="text-md bg-black text-gray-300 border-t-2 border-t-orange-600 font-semibold">{singleToy.subCategory}</td>
-              <td className="text-md bg-black text-gray-300 border-t-2 border-t-orange-600 font-semibold">${singleToy.price}</td>
-              <td className="text-md bg-black text-gray-300 border-t-2 border-t-orange-600 font-semibold text-center">{singleToy.quantity}</td>
-              <td className="bg-black text-gray-300 border-t-2 border-t-orange-600 ">
+              <td className="border-t-2 bg-zinc-800 text-gray-300 border-t-orange-600">{index+1}</td>
+              <td className="border-t-2 bg-zinc-800 text-gray-300 border-t-orange-600"><img className="w-16" src={singleToy.image} alt="" /></td>
+              <td className="text-md bg-zinc-800 text-gray-300 border-t-2 border-t-orange-600 font-semibold">{singleToy.name}</td>
+              <td className="text-md bg-zinc-800 text-gray-300 border-t-2 border-t-orange-600 font-semibold">{singleToy.sellerName}</td>
+              <td className="text-md bg-zinc-800 text-gray-300 border-t-2 border-t-orange-600 font-semibold">{singleToy.subCategory}</td>
+              <td className="text-md bg-zinc-800 text-gray-300 border-t-2 border-t-orange-600 font-semibold">${singleToy.price}</td>
+              <td className="text-md bg-zinc-800 text-gray-300 border-t-2 border-t-orange-600 font-semibold text-center">{singleToy.quantity}</td>
+              <td className="bg-zinc-800 text-gray-300 border-t-2 border-t-orange-600 ">
                 <Link to={`/details/${singleToy._id}`}><button onClick={handleDetails}
                  className="btn border-none 
               bg-orange-500 hover:bg-orange-700">Details</button></Link>

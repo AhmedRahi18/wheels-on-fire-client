@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 const Footer = () => {
   return (
     <div className="">
-      <footer className="footer p-10 rounded-lg bg-black text-gray-300">
+      <footer className="footer p-10 rounded-lg bg-zinc-800 text-gray-300">
         <div>
           <img className='w-24 rounded-xl' src={logo} alt="" />
           <p className='text-xl font-bold'>
@@ -29,7 +29,7 @@ const Footer = () => {
           <p className="link link-hover">Advertisement</p>
         </div>
         <div>
-          <span className="font-bold text-xl">Contact Us</span>
+          <span className="font-bold text-xl text-white">Contact Us</span>
           <p className="link link-hover my-2">wheelsOnFire@gmail.com</p>
           <p className="link link-hover mb-2">tel:00 98 02902</p>
           <p className="link link-hover mb-2">Phone:01883743892</p>
@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
         </div>
         <div>
-          <span className="font-bold text-xl">Legal</span>
+          <span className="font-bold text-xl text-white">Legal</span>
           <a className="link link-hover">Terms of use</a>
           <a className="link link-hover">Privacy policy</a>
           <a className="link link-hover">Cookie policy</a>

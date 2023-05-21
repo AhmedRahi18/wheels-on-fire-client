@@ -4,11 +4,13 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import { CirclesWithBar } from "react-loader-spinner";
+import useTitle from "../hooks/useTitle";
 
 const MyToys = () => {
     const {user} = useContext(AuthContext)
     const [myToys,setMyToys] = useState([])
     const [loader,setLoader] = useState(true)
+    useTitle('MyToys')
     
     useEffect(()=>{
       setLoader(true)
@@ -82,28 +84,28 @@ const MyToys = () => {
           <table className="table w-full">
             <thead>
               <tr>
-                <th className="text-lg font-semibold bg-black text-gray-300">No.</th>
-                <th className="text-lg font-semibold bg-black text-gray-300">Toy</th>
-                <th className="text-lg font-semibold bg-black text-gray-300">Toy Name</th>
-                <th className="text-lg font-semibold bg-black text-gray-300">Seller</th>
-                <th className="text-lg font-semibold bg-black text-gray-300">Sub-Category</th>
-                <th className="text-lg font-semibold bg-black text-gray-300">Price</th>
-                <th className="text-lg font-semibold bg-black text-gray-300">Available Quantity</th>
-                <th className="bg-black text-gray-300"></th>
+                <th className="text-lg font-semibold bg-zinc-800 text-gray-300">No.</th>
+                <th className="text-lg font-semibold bg-zinc-800 text-gray-300">Toy</th>
+                <th className="text-lg font-semibold bg-zinc-800 text-gray-300">Toy Name</th>
+                <th className="text-lg font-semibold bg-zinc-800 text-gray-300">Seller</th>
+                <th className="text-lg font-semibold bg-zinc-800 text-gray-300">Sub-Category</th>
+                <th className="text-lg font-semibold bg-zinc-800 text-gray-300">Price</th>
+                <th className="text-lg font-semibold bg-zinc-800 text-gray-300">Available Quantity</th>
+                <th className="bg-zinc-800 text-gray-300"></th>
               </tr>
             </thead>
             <tbody className="">
               {
                   myToys.map((singleToy,index)=> (
               <tr key={index}>
-                <td className="bg-black border-t-2 border-t-orange-600 text-gray-300">{index+1}</td>
-                <td className="bg-black border-t-2 border-t-orange-600 text-gray-300"><img className="w-16 rounded" src={singleToy.image} alt="" /></td>
-                <td className="text-md border-t-2 border-t-orange-600 bg-black text-gray-300 font-semibold">{singleToy.name}</td>
-                <td className="text-md border-t-2 border-t-orange-600 bg-black text-gray-300 font-semibold">{singleToy.sellerName}</td>
-                <td className="text-md border-t-2 border-t-orange-600 bg-black text-gray-300 font-semibold">{singleToy.subCategory}</td>
-                <td className="text-md border-t-2 border-t-orange-600 bg-black text-gray-300 font-semibold">${singleToy.price}</td>
-                <td className="text-md border-t-2 border-t-orange-600 bg-black text-gray-300 font-semibold text-center">{singleToy.quantity}</td>
-                <td className="bg-black border-t-2 border-t-orange-600 text-gray-300">
+                <td className="bg-zinc-800 border-t-2 border-t-orange-600 text-gray-300">{index+1}</td>
+                <td className="bg-zinc-800 border-t-2 border-t-orange-600 text-gray-300"><img className="w-16 rounded" src={singleToy.image} alt="" /></td>
+                <td className="text-md border-t-2 border-t-orange-600 bg-zinc-800 text-gray-300 font-semibold">{singleToy.name}</td>
+                <td className="text-md border-t-2 border-t-orange-600 bg-zinc-800 text-gray-300 font-semibold">{singleToy.sellerName}</td>
+                <td className="text-md border-t-2 border-t-orange-600 bg-zinc-800 text-gray-300 font-semibold">{singleToy.subCategory}</td>
+                <td className="text-md border-t-2 border-t-orange-600 bg-zinc-800 text-gray-300 font-semibold">${singleToy.price}</td>
+                <td className="text-md border-t-2 border-t-orange-600 bg-zinc-800 text-gray-300 font-semibold text-center">{singleToy.quantity}</td>
+                <td className="bg-zinc-800 border-t-2 border-t-orange-600 text-gray-300">
                   <button onClick={()=>handleDelete(singleToy._id)} className="btn border-none
                 bg-red-600 hover:bg-red-700 me-2"><FaTrashAlt></FaTrashAlt> </button>
                   <Link to={`/update/${singleToy._id}`}><button className="btn border-none

@@ -1,10 +1,12 @@
 import { FaPen } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import useTitle from "../hooks/useTitle";
 
 const UpdateToy = () => {
   const updateToy = useLoaderData();
   const {_id,image,price,quantity,description} = updateToy;
+  useTitle('Update')
 
   const handleUpdate = event =>{
     event.preventDefault()

@@ -3,12 +3,14 @@ import { FaGoogle, FaUserCheck } from 'react-icons/fa';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useTitle from '../hooks/useTitle';
 
 const Login = () => {
     const {signIn,googleSignIn} = useContext(AuthContext)
     const [error,setError] = useState('')
     const location = useLocation()
     const navigate = useNavigate()
+    useTitle('Login')
 
     const from = location.state?.from?.pathname || '/'
 
@@ -63,7 +65,7 @@ const Login = () => {
 
 
   return (
-    <div className="hero mt-20 ">
+    <div className="hero bg-zinc-300 py-20">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
         <h2 className='text-5xl mb-10 text-center text-orange-600 font-bold'>

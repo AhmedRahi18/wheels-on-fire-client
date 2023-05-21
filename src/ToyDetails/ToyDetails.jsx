@@ -1,6 +1,7 @@
 import { FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 
 const ToyDetails = () => {
   const details = useLoaderData();
@@ -14,6 +15,8 @@ const ToyDetails = () => {
     quantity,
     description,
   } = details;
+
+  useTitle('Details')
 
   return (
     <div className="bg-gray-300 rounded pb-5">

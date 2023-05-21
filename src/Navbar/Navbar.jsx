@@ -15,11 +15,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-black p-3 md:rounded-t-lg md:mt-3">
+    <div className="bg-zinc-800 p-3 md:rounded-t-lg md:mt-3">
       <div className="md:flex justify-between mt-5 items-center">
         <div className="flex mb-5 md:mb-0">
           <img className="w-16 rounded" src={logo} alt="" />
-          <i className="text-2xl font-bold mt-3 text-white">
+          <i className="text-2xl font-bold mt-3 ms-2 text-white">
             Wheels
             <span className="text-orange-600">OnFire</span>
           </i>
@@ -30,7 +30,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive
                   ? "font-semibold bg-orange-500 px-5 py-2 rounded text-white border-r-2 border-slate-700 border-b-2"
-                  : "font-semibold hover:bg-orange-500 px-3 py-1 text-gray-400 rounded hover:text-white hover:border-r-2 border-slate-700 hover:border-b-2"
+                  : "font-semibold hover:bg-orange-500 px-3 py-1 text-gray-200 rounded hover:text-white hover:border-r-2 border-slate-700 hover:border-b-2"
               }
               to="/"
             >
@@ -42,7 +42,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive
                   ? "font-semibold bg-orange-500 px-5 py-2 rounded text-white border-r-2 border-slate-700 border-b-2"
-                  : "font-semibold hover:bg-orange-500 px-3 py-1 text-gray-400 rounded hover:text-white hover:border-r-2 border-slate-700 hover:border-b-2"
+                  : "font-semibold hover:bg-orange-500 px-3 py-1 text-gray-200 rounded hover:text-white hover:border-r-2 border-slate-700 hover:border-b-2"
               }
               to="/alltoys"
             >
@@ -55,7 +55,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive
                 ? "font-semibold bg-orange-500 px-5 py-2 rounded text-white border-r-2 border-slate-700 border-b-2"
-                : "font-semibold hover:bg-orange-500 px-3 py-1 text-gray-400 rounded hover:text-white hover:border-r-2 border-slate-700 hover:border-b-2"
+                : "font-semibold hover:bg-orange-500 px-3 py-1 text-gray-200 rounded hover:text-white hover:border-r-2 border-slate-700 hover:border-b-2"
             }
             to="/mytoys"
           >
@@ -69,7 +69,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive
                 ? "font-semibold bg-orange-500 px-5 py-2 rounded text-white border-r-2 border-slate-700 border-b-2"
-                : "font-semibold hover:bg-orange-500 px-3 py-1 text-gray-400 rounded hover:text-white hover:border-r-2 border-slate-700 hover:border-b-2"
+                : "font-semibold hover:bg-orange-500 px-3 py-1 text-gray-200 rounded hover:text-white hover:border-r-2 border-slate-700 hover:border-b-2"
             }
             to="/addtoys"
           >
@@ -82,7 +82,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive
                   ? "font-semibold bg-orange-500 px-5 py-2 rounded text-white border-r-2 border-slate-700 border-b-2"
-                  : "font-semibold hover:bg-orange-500 px-3 py-1 text-gray-400 rounded hover:text-white hover:border-r-2 border-slate-700 hover:border-b-2"
+                  : "font-semibold hover:bg-orange-500 px-3 py-1 text-gray-200 rounded hover:text-white hover:border-r-2 border-slate-700 hover:border-b-2"
               }
               to="/blogs"
             >

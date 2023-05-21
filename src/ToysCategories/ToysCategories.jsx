@@ -37,12 +37,12 @@ const ToysCategories = () => {
 
   return (
     <div>
-      <h2 className="text-6xl text-center font-bold text-black mt-20 mb-5">
+      <h2 className="text-5xl text-center font-bold text-black mt-20 mb-7">
         Shop By Category
       </h2>
-      <p className="text-gray-700 font-semibold text-center mb-16">
+      <p className="text-gray-700 font-semibold w-3/4 md:w-1/2 mx-auto text-center mb-16">
         Find your perfect Car! Browse our shop by category section for a
-        <br /> curated selection of toy cars that suit your preferences.
+         curated selection of toy cars that suit your preferences.
       </p>
       <div
         data-aos="fade-up"
@@ -53,7 +53,7 @@ const ToysCategories = () => {
           Select By Category
         </p>
         <Tabs>
-          <TabList className="text-orange-600 font-semibold text-xl">
+          <TabList className="text-orange-600 flex justify-center font-semibold text-xl">
             <Tab onClick={() => handleTabClick("All")}>All</Tab>
             <Tab onClick={() => handleTabClick("Sports")}>Sports Cars</Tab>
             <Tab onClick={() => handleTabClick("Off-Road")}>Off-Road Cars</Tab>
@@ -84,7 +84,7 @@ const ToysCategories = () => {
           </TabPanel>
         </Tabs>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-5 md:px-5 pb-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 ms-2 md:ms-0 md:gap-5 md:px-5 pb-16">
         {visibleToys.map((toy) => (
           <ToyCard key={toy._id} toy={toy} />
         ))}

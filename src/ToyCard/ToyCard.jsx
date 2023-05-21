@@ -51,7 +51,7 @@ const ToyCard = ({ toy }) => {
             }
           />
           <div className="card-actions justify-end">
-            <Link to={`/details/${_id}`}><button onClick={handleDetails} className="btn bg-gradient-to-r from-orange-500 to-orange-700">
+            <Link to={`/details/${_id}`}><button onClick={handleDetails} className="btn bg-gradient-to-r from-orange-500 to-orange-700 border-none">
               View Details
             </button></Link>
           </div>

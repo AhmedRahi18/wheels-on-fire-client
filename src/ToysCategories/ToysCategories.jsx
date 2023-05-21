@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import ToyCard from "../ToyCard/ToyCard";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 import Aos from "aos";
 import 'aos/dist/aos.css';
 
@@ -35,16 +37,27 @@ const ToysCategories = () => {
             className="bg-zinc-800 p-3 rounded-lg md:w-1/2 mb-4 
             text-center mx-2 md:mx-auto">
             <p className="text-2xl mb-3 font-semibold text-white ">Select By Category</p>
-            <div className=''>
-                <div className="flex mb-2 justify-center">
-                    <p className="text-xl mb-3 md:mb-0 font-bold border-2 border-orange-600 text-orange-600 p-2 rounded-lg me-3 hover:bg-orange-600 hover:text-white"
-                   onClick={()=>handleTabClick('Sports')}>Sports Cars</p>
-                    <p className="text-xl mb-3 md:mb-0 font-bold border-2 border-orange-600 text-orange-600 p-2 rounded-lg me-3 hover:bg-orange-600 hover:text-white"
-                    onClick={()=>handleTabClick('Off-Road')}>Off-Road Cars</p>
-                    <p className="text-xl font-bold border-2 border-orange-600 text-orange-600 p-2 rounded-lg hover:bg-orange-600 hover:text-white"
-                    onClick={()=>handleTabClick('Emergency')}>Emergency Cars</p>
-                </div>
-            </div>
+            <Tabs>
+    <TabList className="text-orange-600 font-semibold text-xl">
+      <Tab onClick={()=>handleTabClick('All')}>All</Tab>
+      <Tab onClick={()=>handleTabClick('Sports')}>Sports Cars</Tab>
+      <Tab onClick={()=>handleTabClick('Off-Road')}>Off-Road Cars</Tab>
+      <Tab onClick={()=>handleTabClick('Emergency')}>Emergency Cars</Tab>
+    </TabList>
+
+    <TabPanel>
+      <h2 className="text-orange-600 font-semibold underline text-xl">All</h2>
+    </TabPanel>
+    <TabPanel>
+      <h2 className="text-orange-600 font-semibold underline text-xl">Sports Cars</h2>
+    </TabPanel>
+    <TabPanel>
+      <h2 className="text-orange-600 font-semibold underline text-xl">Off-Road Cars</h2>
+    </TabPanel>
+    <TabPanel>
+      <h2 className="text-orange-600 font-semibold underline text-xl">Emergency Cars</h2>
+    </TabPanel>
+  </Tabs>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-5 md:px-5 pb-16">
                 {

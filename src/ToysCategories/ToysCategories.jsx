@@ -37,7 +37,7 @@ const ToysCategories = () => {
 
   return (
     <div>
-      <h2 className="text-6xl text-center font-bold text-black mt-5 mb-5">
+      <h2 className="text-6xl text-center font-bold text-black mt-20 mb-5">
         Shop By Category
       </h2>
       <p className="text-gray-700 font-semibold text-center mb-16">
@@ -90,7 +90,7 @@ const ToysCategories = () => {
         ))}
       </div>
       {toys.length > 6 && !showMore && (
-        <div data-aos="zoom-out" className="text-center">
+        <div className="text-center">
             <button
           className="btn bg-gradient-to-r from-orange-500 to-orange-700 border-none mb-10"
           onClick={handleShowMore}
@@ -100,7 +100,7 @@ const ToysCategories = () => {
         </div>
       )}
       {showMore && (
-        <div data-aos="zoom-out" className="text-center">
+        <div className="text-center">
             <button
           className="btn bg-gradient-to-r from-orange-500 to-orange-700 border-none mb-10"
           onClick={handleShowLess}

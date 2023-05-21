@@ -10,17 +10,18 @@ const MyToys = () => {
     const {user} = useContext(AuthContext)
     const [myToys,setMyToys] = useState([])
     const [loader,setLoader] = useState(true)
+    const [sortBy, setSortBy] = useState("");
     useTitle('MyToys')
     
     useEffect(()=>{
       setLoader(true)
-        fetch(`http://localhost:5000/mytoys/${user?.email}`)
+        fetch(`http://localhost:5000/mytoys/${user?.email}?sortBy=${sortBy}`)
         .then(res => res.json())
         .then(data => {
             setMyToys(data)
             setLoader(false)
         })
-    },[user])
+    },[user,sortBy])
 
     const handleDelete = id => {
         Swal.fire({
@@ -52,10 +53,12 @@ const MyToys = () => {
             }
           })
         
-            
+          
+        }
+        const handleSortChange = e => {
+          setSortBy(e.target.value);
+        };
         
-    }
-    
     return (
         <div>
           {
@@ -76,10 +79,29 @@ const MyToys = () => {
       />
         </div>
             ):(<div className="pb-10 px-3 bg-gray-200">
+              
               <h2 className="text-5xl pt-10 mb-4 text-center text-black font-bold">My Toys</h2>
               <p className="text-gray-700 font-semibold text-center mb-16">
                 Here are those amazing toy cars that you added</p>
               <div>
+              <div className="flex justify-end pb-5 me-5">
+              <select
+                  className="rounded p-2 bg-zinc-500 font-bold"
+                  name="subCategory"
+                  value={sortBy}
+          onChange={handleSortChange}
+                >
+                  <option className="font-bold text-orange-600" value="">
+                  Sort by
+                  </option>
+                  <option className="font-bold text-orange-600" value="desc">
+                  descending
+                  </option>
+                  <option className="font-bold text-orange-600" value="asc">
+                  ascending
+                  </option>
+                </select>
+              </div>
               <div className="overflow-x-auto">
           <table className="table w-full">
             <thead>

@@ -15,7 +15,7 @@ const MyToys = () => {
     
     useEffect(()=>{
       setLoader(true)
-        fetch(`http://localhost:5000/mytoys/${user?.email}?sortBy=${sortBy}`)
+        fetch(`https://wheels-on-fire-server.vercel.app/mytoys/${user?.email}?sortBy=${sortBy}`)
         .then(res => res.json())
         .then(data => {
             setMyToys(data)
@@ -34,7 +34,7 @@ const MyToys = () => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/deletetoy/${id}`,{
+                fetch(`https://wheels-on-fire-server.vercel.app/deletetoy/${id}`,{
                 method:'DELETE'
             })
             .then(res => res.json())

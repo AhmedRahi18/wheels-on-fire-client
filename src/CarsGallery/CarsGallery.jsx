@@ -25,13 +25,13 @@ const CarsGallery = () => {
         p-5 md:p-10 "
       >
         <img
-          data-aos = "fade-right"
+          data-aos = "fade-left"
           className="md:col-span-2 rounded-lg"
           src="https://t4.ftcdn.net/jpg/05/77/02/47/360_F_577024786_0PFePZ5smKNkhghe4OkcDJbgCScW5t1F.jpg"
           alt=""
         />
         <img
-        data-aos = "fade-right"
+        data-aos = "fade-left"
           className="md:col-span-2 w-72 ms-3 rounded-lg mt-20 md:mt-24"
           src="https://i.ytimg.com/vi/TJzxcfC_z4k/hqdefault.jpg?sqp=-oaymwEiCKgBEF5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLCnuHQXtK_NYFMBfHXVUsSEt987EQ"
           alt=""
@@ -57,13 +57,13 @@ const CarsGallery = () => {
         </div>
         <div className="flex justify-around p-10 pt-5">
         <img
-        data-aos = "fade-up"
+        data-aos = "fade-down"
           className="rounded-lg w-1/2 me-5 mt-5"
           src="https://i.ytimg.com/vi/b6nEwGWYJnU/maxresdefault.jpg"
           alt=""
         />
         <img
-        data-aos = "fade-up"
+        data-aos = "fade-down"
           className="rounded-lg w-1/2 mt-5"
           src="https://i.pinimg.com/736x/d1/8f/d7/d18fd71b038ce473e2de21e7f22534b8.jpg"
           alt=""

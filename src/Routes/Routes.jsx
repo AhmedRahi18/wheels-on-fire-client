@@ -48,12 +48,12 @@ const router = createBrowserRouter([
       {
         path: 'update/:id',
         element: <UpdateToy></UpdateToy>,
-        loader:({params})=>fetch(`http://localhost:5000/singletoy/${params.id}`)
+        loader:({params})=>fetch(`https://wheels-on-fire-server.vercel.app/singletoy/${params.id}`)
       },
       {
         path: 'details/:id',
         element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/singletoy/${params.id}`)
+        loader:({params})=>fetch(`https://wheels-on-fire-server.vercel.app/singletoy/${params.id}`)
       }
     ],
   },

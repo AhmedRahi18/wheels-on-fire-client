@@ -14,7 +14,7 @@ const AllToys = () => {
 
     useEffect(()=>{
       setLoader(true)
-        fetch('http://localhost:5000/toys')
+        fetch('https://wheels-on-fire-server.vercel.app/toys')
         .then(res => res.json())
         .then(data => {
           setAllToys(data)
@@ -23,7 +23,7 @@ const AllToys = () => {
     },[])
 
     const handleSearch = () => {
-      fetch(`http://localhost:5000/toysearch/${search}`)
+      fetch(`https://wheels-on-fire-server.vercel.app/toysearch/${search}`)
       .then(res => res.json())
       .then(data => {
         setAllToys(data)

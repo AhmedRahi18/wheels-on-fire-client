@@ -15,7 +15,7 @@ const UpdateToy = () => {
     const quantity = form.quantity.value;
     const description = form.description.value;
 
-    fetch(`http://localhost:5000/update/${_id}`,{
+    fetch(`https://wheels-on-fire-server.vercel.app/update/${_id}`,{
         method: 'PATCH',
         headers:{
             'content-type': 'application/json'

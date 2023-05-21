@@ -20,7 +20,7 @@ const ToysCategories = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toys/${activeTab}`)
+    fetch(`https://wheels-on-fire-server.vercel.app/toys/${activeTab}`)
       .then((res) => res.json())
       .then((data) => setToys(data));
   }, [activeTab]);

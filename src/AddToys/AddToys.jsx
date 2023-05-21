@@ -31,7 +31,7 @@ const AddToys = () => {
       description: detail,
     }
 
-    fetch("http://localhost:5000/toys", {
+    fetch("https://wheels-on-fire-server.vercel.app/toys", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -18,8 +18,8 @@ const Partners = () => {
                 <div data-aos="fade-up" className="grid grid-cols-2 md:grid-cols-4 gap-4 
                 ms-10 md:ms-20">
                     <img className="rounded" src="https://i0.wp.com/abctoysbd.com/wp-content/uploads/2023/05/unimart.jpg?resize=150%2C150&ssl=1" alt="" />
-                    {/* <img className="w-40 rounded" src="https://i0.wp.com/abctoysbd.com/wp-content/uploads/2023/05/kids-mom.jpg?resize=150%2C150&ssl=1" alt="" />
-                    <img className="rounded" src="https://i0.wp.com/abctoysbd.com/wp-content/uploads/2023/05/well-being.jpg?resize=150%2C150&ssl=1" alt="" />
+                    <img className="w-40 rounded" src="https://i0.wp.com/abctoysbd.com/wp-content/uploads/2023/05/kids-mom.jpg?resize=150%2C150&ssl=1" alt="" />
+                    {/* <img className="rounded" src="https://i0.wp.com/abctoysbd.com/wp-content/uploads/2023/05/well-being.jpg?resize=150%2C150&ssl=1" alt="" />
                     <img className="w-40 rounded" src="https://i0.wp.com/abctoysbd.com/wp-content/uploads/2023/05/lavander.jpg?resize=150%2C150&ssl=1" alt="" /> */}
                 </div>
             </div>

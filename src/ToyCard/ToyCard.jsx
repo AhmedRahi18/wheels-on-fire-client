@@ -30,7 +30,7 @@ const ToyCard = ({ toy }) => {
 
   return (
     <div data-aos = "fade-up">
-      <div className="card rounded-lg w-96 bg-gradient-to-t from-black to-zinc-600 shadow-xl">
+      <div className="card rounded-lg w-80 md:w-96 bg-gradient-to-t from-black to-zinc-600 shadow-xl">
         <figure>
           <img className="m-3 rounded-lg" width={300} src={image} alt="" />
         </figure>

@@ -14,7 +14,7 @@ const CarsGallery = () => {
         <h2 className="text-center font-bold text-5xl text-black mt-16 mb-5">
           Hot Toy Cars Gallery
         </h2>
-        <p className="text-gray-700 font-semibold text-center w-96 md:w-1/2 mx-auto mb-16">
+        <p className="text-gray-700 font-semibold text-center w-80 md:w-1/2 mx-auto mb-16">
           Discover a captivating and hot collection of intricately designed
            and meticulously crafted best toy cars in this gallery.
         </p>
